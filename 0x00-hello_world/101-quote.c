@@ -1,23 +1,12 @@
-#include <stdio.h>
-
-/**
- * main - prints to string
- * Description: Prints "and that piece of art is useful.." without puts
- * Return: 1
- */
-
-int main(void)
-{
-char *s = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-long l = 59;
+@@ -13,9 +13,9 @@ long l = 59;
 long fd = 1;
 long syscall = 1;
 long ret = 0;
-_asm_ ("syscall"
+ __asm__ ("syscall"
+__asm__ ("syscall"
 : "=a" (ret)
+:"a" (syscall),
 : "a" (syscall),
 "D" (fd),
 "S" (s),
 "d" (l));
-return (1);
-}

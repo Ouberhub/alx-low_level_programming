@@ -8,6 +8,6 @@
  */
 void set_string(char **s, char *to)
 {
-sh: 1: q: not found
+	*s = to;
 }
 
